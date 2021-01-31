@@ -1,15 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
+import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.scss";
 
+const client = new ApolloClient({
+	uri: "https://api.github.com/graphql",
+	headers: {
+		Authorization: `bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
+	},
+});
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<ApolloProvider client={client}>
+			<App />
+		</ApolloProvider>
+	</React.StrictMode>,
+	document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
