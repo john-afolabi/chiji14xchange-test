@@ -12,7 +12,7 @@ const Profile = ({ user }) => {
 			<img
 				src={user.avatarUrl}
 				alt={user.login}
-				className="profile-image"
+				className="profile-image img-fluid"
 			/>
 			<h3>{user.name}</h3>
 			<p className="username">{user.login}</p>
