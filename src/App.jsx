@@ -65,7 +65,10 @@ const App = () => {
 				const { user } = data;
 				return (
 					<div className="App">
-						<Navigation profileImage={user.avatarUrl} />
+						<Navigation
+							profileImage={user.avatarUrl}
+							username={user.login}
+						/>
 
 						<div className="mt-4 position-sticky top-0 d-none d-md-block bg-white width-full border-bottom color-border-secondary">
 							<div className="container-xl px-3 px-md-4 px-lg-5">

@@ -5,18 +5,12 @@ import { ReactComponent as Plus } from "../assets/images/svg/plus.svg";
 import DefaultProfile from "../assets/images/png/profile.png";
 import NavigationWrapper from "../assets/styles/NavigationWrapper";
 
-const Navigation = ({ profileImage }) => {
+const Navigation = ({ profileImage, username }) => {
 	const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 	const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
 	return (
-		<NavigationWrapper className="navbar navbar-expand-lg">
-			<a className="navbar-brand" href="/">
-				<span>
-					<LogoWhite />
-				</span>
-			</a>
-
+		<NavigationWrapper className="navbar navbar-expand-lg navbar-dark">
 			<button
 				className="navbar-toggler"
 				type="button"
@@ -30,6 +24,15 @@ const Navigation = ({ profileImage }) => {
 				<span className="navbar-toggler-icon"></span>
 			</button>
 
+			<a className="navbar-brand" href="/">
+				<span>
+					<LogoWhite />
+				</span>
+			</a>
+
+			<span className="d-lg-none">
+				<Notification />
+			</span>
 			<div
 				className={`${
 					isNavCollapsed ? "collapse" : ""
@@ -47,6 +50,13 @@ const Navigation = ({ profileImage }) => {
 				</form>
 
 				<ul className="navbar-nav mr-auto">
+					<li className="nav-item d-block d-lg-none">
+						<a className="nav-link" href="/">
+							<span className="d-flex align-items-center">
+								Dashboard
+							</span>
+						</a>
+					</li>
 					<li className="nav-item">
 						<a className="nav-link" href="/">
 							<span className="d-flex align-items-center">
@@ -85,8 +95,31 @@ const Navigation = ({ profileImage }) => {
 							</span>
 						</a>
 					</li>
+					<li className="nav-item d-block d-lg-none">
+						<a className="nav-link" href="/">
+							<span className="d-flex align-items-center">
+								Settings
+							</span>
+						</a>
+					</li>
+					<li className="nav-item d-block d-lg-none">
+						<a className="nav-link" href="/">
+							<span className="d-flex align-items-center">
+								<img
+									src={
+										profileImage
+											? profileImage
+											: DefaultProfile
+									}
+									alt="profile"
+									className="profile-image mr-2"
+								/>
+								{username}
+							</span>
+						</a>
+					</li>
 				</ul>
-				<div className="d-flex align-items-center justify-content-between">
+				<div className="d-none d-lg-flex align-items-center justify-content-between">
 					<div className="px-2">
 						<Notification />
 					</div>
