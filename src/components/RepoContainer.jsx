@@ -20,50 +20,52 @@ const RepoContainer = ({ repos }) => {
 
 	return (
 		<RepoContainerWrapper>
-			<div className="row my-4">
+			<div className="my-4 d-block d-md-flex">
 				<input
 					name="search"
 					type="search"
 					autoComplete="off"
 					placeholder="Find a repository..."
-					className="form-control form-control-sm col-6 mr-2"
+					className="form-control form-control-sm mb-3 mb-md-0 mr-md-3 flex-auto"
 					onChange={handleChange}
 				/>
 
-				<select
-					className="form-control form-control-sm col-2 mr-2"
-					defaultValue={1}
-				>
-					<option value={1} disabled>
-						Type: All
-					</option>
-					<option></option>
-					<option>Public</option>
-					<option>Private</option>
-					<option>Sources</option>
-					<option>Forks</option>
-				</select>
+				<div className="d-flex">
+					<select
+						className="form-control form-control-sm  mr-2"
+						defaultValue={1}
+					>
+						<option value={1} disabled>
+							Type: All
+						</option>
+						<option></option>
+						<option>Public</option>
+						<option>Private</option>
+						<option>Sources</option>
+						<option>Forks</option>
+					</select>
 
-				<select
-					className="form-control form-control-sm col-2 mr-2"
-					defaultValue={1}
-				>
-					<option value={1} disabled>
-						Language: All
-					</option>
-					<option>JavaScript</option>
-					<option>HTML</option>
-					<option>SCSS</option>
-					<option>TypeScript</option>
-					<option>Python</option>
-				</select>
+					<select
+						className="form-control form-control-sm flex-auto mr-2"
+						defaultValue={1}
+					>
+						<option value={1} disabled>
+							Language: All
+						</option>
+						<option>JavaScript</option>
+						<option>HTML</option>
+						<option>SCSS</option>
+						<option>TypeScript</option>
+						<option>Python</option>
+					</select>
 
-				<button className="new col-1">
-					<span className="mr-1">
-						<Repositories />
-					</span>
-					New
-				</button>
+					<button className="new col">
+						<span className="mr-1">
+							<Repositories />
+						</span>
+						New
+					</button>
+				</div>
 			</div>
 
 			<RepoCard filteredRepos={filteredRepos} search={search} />
