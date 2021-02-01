@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const SubNavWrapper = styled.nav`
+	padding: unset;
 	a.nav-link {
 		color: #24292e;
 

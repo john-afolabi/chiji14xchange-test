@@ -20,13 +20,13 @@ const RepoContainer = ({ repos }) => {
 
 	return (
 		<RepoContainerWrapper>
-			<div className="row mb-4">
+			<div className="row my-4">
 				<input
 					name="search"
 					type="search"
 					autoComplete="off"
 					placeholder="Find a repository..."
-					className="form-control form-control-sm col-6 mr-4"
+					className="form-control form-control-sm col-6 mr-2"
 					onChange={handleChange}
 				/>
 
