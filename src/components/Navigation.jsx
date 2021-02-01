@@ -12,7 +12,7 @@ const Navigation = ({ profileImage, username }) => {
 	return (
 		<NavigationWrapper className="navbar navbar-expand-lg navbar-dark">
 			<button
-				className="navbar-toggler"
+				className="navbar-toggler border-0"
 				type="button"
 				data-toggle="collapse"
 				data-target="#navbarSupportedContent"

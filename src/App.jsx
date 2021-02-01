@@ -86,11 +86,11 @@ const App = () => {
 						</div>
 						<div className="container-xl px-3 px-md-4 px-lg-5">
 							<div className="gutter-condensed gutter-lg flex-column flex-md-row d-flex">
-								<div className="flex-shrink-0 col-12 col-md-3 mb-4 mb-md-0 h-card mt-md-n5">
+								<div className="flex-shrink-0 col-12 col-md-3 mb-4 mb-md-0 h-card mt-md-n5 px-0">
 									<Profile user={user} />
 								</div>
 
-								<div className="flex-shrink-0 col-12 col-md-9 mb-4 mb-md-0">
+								<div className="flex-shrink-0 col-12 col-md-9 mb-4 mb-md-0 px-0">
 									<RepoContainer
 										repos={user.repositories.edges}
 									/>
