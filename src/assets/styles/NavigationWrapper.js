@@ -14,7 +14,7 @@ const NavigationWrapper = styled.nav`
 		border: 1px solid #444d56;
 		margin-right: 8px;
 
-		@media (max-width: 992px) {
+		@media (max-width: 767px) {
 			margin: 1rem 0;
 			width: 100% !important;
 		}
@@ -28,14 +28,14 @@ const NavigationWrapper = styled.nav`
 		color: #fff !important;
 		font-weight: 600;
 
-		@media (max-width: 992px) {
+		@media (max-width: 767px) {
 			border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 			padding: 8px 0;
 		}
 	}
 
 	a.nav-link:first-of-type {
-		@media (max-width: 992px) {
+		@media (max-width: 767px) {
 			border-top: 1px solid rgba(255, 255, 255, 0.15);
 		}
 	}

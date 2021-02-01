@@ -71,7 +71,7 @@ const App = () => {
 						/>
 
 						<div className="mt-4 position-sticky top-0 d-none d-md-block bg-white width-full border-bottom color-border-secondary">
-							<div className="container-xl px-3 px-md-4 px-lg-5">
+							<div className="container-xl px-0 px-md-2 px-lg-3">
 								<div className="gutter-condensed gutter-lg flex-column flex-md-row d-flex">
 									<div className="flex-shrink-0 col-12 col-md-3 mb-4 mb-md-0"></div>
 									<div className="flex-shrink-0 col-12 col-md-9 mb-4 mb-md-0">
@@ -84,21 +84,19 @@ const App = () => {
 								</div>
 							</div>
 						</div>
-						<div className="container-xl px-3 px-md-4 px-lg-5">
+						<div className="container-xl px-0 px-md-2 px-lg-3">
 							<div className="gutter-condensed gutter-lg flex-column flex-md-row d-flex">
-								<div className="flex-shrink-0 col-12 col-md-3 mb-4 mb-md-0 h-card mt-md-n5 px-0">
+								<div className="flex-shrink-0 col-12 col-md-3 mb-4 mb-md-0 h-card mt-md-n5">
 									<Profile user={user} />
 								</div>
 
-								<div className="flex-shrink-0 col-12 col-md-9 mb-4 mb-md-0 px-0">
+								<div className="flex-shrink-0 col-12 col-md-9 mb-4 mb-md-0 ">
 									<RepoContainer
 										repos={user.repositories.edges}
 									/>
 								</div>
 							</div>
 						</div>
-
-						{console.log(user)}
 					</div>
 				);
 			}}

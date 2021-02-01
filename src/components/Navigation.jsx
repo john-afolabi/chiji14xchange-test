@@ -10,7 +10,7 @@ const Navigation = ({ profileImage, username }) => {
 	const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
 	return (
-		<NavigationWrapper className="navbar navbar-expand-lg navbar-dark">
+		<NavigationWrapper className="navbar navbar-expand-md navbar-dark">
 			<button
 				className="navbar-toggler border-0"
 				type="button"
@@ -30,7 +30,7 @@ const Navigation = ({ profileImage, username }) => {
 				</span>
 			</a>
 
-			<span className="d-lg-none">
+			<span className="d-md-none">
 				<Notification />
 			</span>
 			<div
@@ -50,7 +50,7 @@ const Navigation = ({ profileImage, username }) => {
 				</form>
 
 				<ul className="navbar-nav mr-auto">
-					<li className="nav-item d-block d-lg-none">
+					<li className="nav-item d-block d-md-none">
 						<a className="nav-link" href="/">
 							<span className="d-flex align-items-center">
 								Dashboard
@@ -95,14 +95,14 @@ const Navigation = ({ profileImage, username }) => {
 							</span>
 						</a>
 					</li>
-					<li className="nav-item d-block d-lg-none">
+					<li className="nav-item d-block d-md-none">
 						<a className="nav-link" href="/">
 							<span className="d-flex align-items-center">
 								Settings
 							</span>
 						</a>
 					</li>
-					<li className="nav-item d-block d-lg-none">
+					<li className="nav-item d-block d-md-none">
 						<a className="nav-link" href="/">
 							<span className="d-flex align-items-center">
 								<img
@@ -119,15 +119,15 @@ const Navigation = ({ profileImage, username }) => {
 						</a>
 					</li>
 				</ul>
-				<div className="d-none d-lg-flex align-items-center justify-content-between">
-					<div className="px-2">
+				<div className="d-none d-md-flex align-items-center justify-content-between">
+					<div className="px-1 px-lg-2">
 						<Notification />
 					</div>
-					<div className="px-2">
+					<div className="px-1 px-lg-2">
 						<Plus />
 						<span className="dropdown-caret ml-1"></span>
 					</div>
-					<div className="px-2">
+					<div className="px-1 px-lg-2">
 						<img
 							src={profileImage ? profileImage : DefaultProfile}
 							alt="profile"
